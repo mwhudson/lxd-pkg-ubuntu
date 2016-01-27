@@ -46,32 +46,27 @@ else
 	# has installed it, as appropriate.
 
 	# Packaged dependencies
-	debian/helpers/link-from-installed github.com/coreos/go-systemd
-	debian/helpers/link-from-installed github.com/dustinkirkland/golang-petname
 	debian/helpers/link-from-installed github.com/golang/protobuf
 	debian/helpers/link-from-installed github.com/gorilla/context
 	debian/helpers/link-from-installed github.com/gorilla/mux
+	debian/helpers/link-from-installed github.com/gorilla/websocket
 	debian/helpers/link-from-installed github.com/mattn/go-sqlite3
-	debian/helpers/link-from-installed github.com/olekukonko/tablewriter
-	debian/helpers/link-from-installed github.com/pborman/uuid
-	debian/helpers/link-from-installed github.com/syndtr/gocapability
 	debian/helpers/link-from-installed golang.org/x/crypto
-	debian/helpers/link-from-installed gopkg.in/tomb.v2
-	debian/helpers/link-from-installed gopkg.in/yaml.v2
-
-	# Alternative package path: github.com/stgraber/lxd-go-systemd -> github.com/coreos/go-systemd
-	mkdir -p ${GOPATH}/src/github.com/stgraber/
-	ln -s ${GOPATH}/src/github.com/coreos/go-systemd ${GOPATH}/src/github.com/stgraber/lxd-go-systemd
 
 	# Packages that aren't in the archive
+	debian/helpers/link-from-bundled github.com/dustinkirkland/golang-petname
+	debian/helpers/link-from-bundled github.com/gosexy/gettext
 	debian/helpers/link-from-bundled github.com/mattn/go-colorable
+	debian/helpers/link-from-bundled github.com/mattn/go-runewidth
+	debian/helpers/link-from-bundled github.com/olekukonko/tablewriter
+	debian/helpers/link-from-bundled github.com/pborman/uuid
+	debian/helpers/link-from-bundled github.com/syndtr/gocapability/capability
 	debian/helpers/link-from-bundled gopkg.in/flosch/pongo2.v3
 	debian/helpers/link-from-bundled gopkg.in/inconshreveable/log15.v2
 	debian/helpers/link-from-bundled gopkg.in/lxc/go-lxc.v2
-
-	# Packages that aren't in main yet
-	debian/helpers/link-from-bundled github.com/gorilla/websocket
-	debian/helpers/link-from-bundled github.com/gosexy/gettext
+	debian/helpers/link-from-bundled gopkg.in/tomb.v2
+	debian/helpers/link-from-bundled gopkg.in/yaml.v2
+	debian/helpers/link-from-bundled github.com/stgraber/lxd-go-systemd
 endif
 
 	# And put the lxd source back again.
