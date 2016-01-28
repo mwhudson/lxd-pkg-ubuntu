@@ -1,3 +1,9 @@
+lxd (2.0.0~beta1-0ubuntu5) xenial; urgency=medium
+
+  * Build shared lib package
+
+ -- Michael Hudson-Doyle <michael.hudson@canonical.com>  Thu, 28 Jan 2016 13:20:24 +1300
+
 lxd (2.0.0~beta1-0ubuntu4) UNRELEASED; urgency=medium
 
   * Update build deps. 

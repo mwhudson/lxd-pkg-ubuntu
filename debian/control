@@ -19,8 +19,9 @@ Build-Depends: debhelper (>= 9),
                help2man,
                lxc-dev (>= 1.1.0~),
                pkg-config,
-               protobuf-compiler
-XS-Testsuite: autopkgtest
+               protobuf-compiler,
+               golang-go-shared-dev [amd64]
+Xs-Testsuite: autopkgtest
 
 Package: lxd-client
 Architecture: any
@@ -66,8 +67,18 @@ Description: Container hypervisor based on LXC - extra tools
   - fuidshift - A tool to map/unmap filesystem uids/gids
 
 Package: golang-github-lxc-lxd-dev
-Architecture: all
-Depends: golang-go, lxc-dev, pkg-config, ${misc:Depends}, ${shlibs:Depends}
+Architecture: any
+Depends: golang-go, lxc-dev, pkg-config, ${misc:Depends}, ${shlibs:Depends}, libgolang-github-lxc-lxd1 (= ${binary:Version}) [amd64]
+Description: Container hypervisor based on LXC - go source
+ LXD offers a REST API to remotely manage containers over the network,
+ using an image based workflow and with support for live migration.
+ .
+ This package contains the source tree of the lxd project.
+
+Package: libgolang-github-lxc-lxd1
+Architecture: amd64
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Provides: ${golang:Provides}
 Description: Container hypervisor based on LXC - go source
  LXD offers a REST API to remotely manage containers over the network,
  using an image based workflow and with support for live migration.
