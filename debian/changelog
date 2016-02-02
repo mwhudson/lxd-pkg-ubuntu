@@ -1,3 +1,9 @@
+lxd (2.0.0~beta1-0ubuntu6) xenial; urgency=medium
+
+  * Fix build of non-shared-lib packge. 
+
+ -- Michael Hudson-Doyle <michael.hudson@canonical.com>  Tue, 02 Feb 2016 15:34:17 +1300
+
 lxd (2.0.0~beta1-0ubuntu5) xenial; urgency=medium
 
   * Build shared lib package
