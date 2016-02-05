@@ -20,7 +20,7 @@ Build-Depends: debhelper (>= 9),
                lxc-dev (>= 1.1.0~),
                pkg-config,
                protobuf-compiler,
-               golang-go-shared-dev [amd64]
+               golang-go-shared-dev [amd64 s390x]
 Xs-Testsuite: autopkgtest
 
 Package: lxd-client
@@ -68,7 +68,7 @@ Description: Container hypervisor based on LXC - extra tools
 
 Package: golang-github-lxc-lxd-dev
 Architecture: any
-Depends: golang-go, lxc-dev, pkg-config, ${misc:Depends}, ${shlibs:Depends}, libgolang-github-lxc-lxd1 (= ${binary:Version}) [amd64]
+Depends: golang-go, lxc-dev, pkg-config, ${misc:Depends}, ${shlibs:Depends}, libgolang-github-lxc-lxd1 (= ${binary:Version}) [amd64 s390x]
 Description: Container hypervisor based on LXC - go source
  LXD offers a REST API to remotely manage containers over the network,
  using an image based workflow and with support for live migration.
@@ -76,7 +76,7 @@ Description: Container hypervisor based on LXC - go source
  This package contains the source tree of the lxd project.
 
 Package: libgolang-github-lxc-lxd1
-Architecture: amd64
+Architecture: amd64 s390x
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Provides: ${golang:Provides}
 Description: Container hypervisor based on LXC - go source

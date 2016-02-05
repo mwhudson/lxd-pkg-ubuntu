@@ -1,3 +1,21 @@
+lxd (2.0.0~beta1-0ubuntu9) xenial; urgency=medium
+
+  * Update shared lib architectures.
+
+ -- Michael Hudson-Doyle <michael.hudson@canonical.com>  Fri, 05 Feb 2016 15:12:54 +1300
+
+lxd (2.0.0~beta1-0ubuntu8) xenial; urgency=medium
+
+  * Debugging via ppa, sigh. 
+
+ -- Michael Hudson-Doyle <michael.hudson@canonical.com>  Thu, 04 Feb 2016 12:02:08 +1300
+
+lxd (2.0.0~beta1-0ubuntu7) xenial; urgency=medium
+
+  * Set USE_EMBEDDED=false again, whoops.
+
+ -- Michael Hudson-Doyle <michael.hudson@canonical.com>  Thu, 04 Feb 2016 11:35:34 +1300
+
 lxd (2.0.0~beta1-0ubuntu6) xenial; urgency=medium
 
   * Fix build of non-shared-lib packge. 

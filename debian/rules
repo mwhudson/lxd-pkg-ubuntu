@@ -12,7 +12,7 @@ export DH_GOPKG := github.com/lxc/lxd
 export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)
 export USE_EMBEDDED := false
 
-shlib_archs = amd64
+shlib_archs = amd64 s390x
 ifneq (,$(filter $(DEB_HOST_ARCH),$(shlib_archs)))
 	export IS_SHLIB_ARCH := true
 else
